@@ -6,7 +6,7 @@ export const profileData: Profile = {
   description: 'AI 기술을 활용한 혁신적인 솔루션을 개발하고, 창업을 통해 세상을 더 나은 곳으로 만들어가는 것이 목표입니다. 끊임없는 학습과 도전을 통해 새로운 가능성을 탐구합니다.',
   email: 'contact@bori.ai',
   location: 'Seoul, South Korea',
-  profileImage: '/images/profile.jpg',
+  profileImage: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSIxMDAiIGZpbGw9IiM2MzY2ZjEiLz48Y2lyY2xlIGN4PSIxMDAiIGN5PSI4MCIgcj0iMzAiIGZpbGw9IndoaXRlIi8+PGVsbGlwc2UgY3g9IjEwMCIgY3k9IjE0MCIgcng9IjQwIiByeT0iMjAiIGZpbGw9IndoaXRlIi8+PC9zdmc+',
   resumeUrl: '/resume.pdf'
 };
 

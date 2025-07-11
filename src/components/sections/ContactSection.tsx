@@ -22,6 +22,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [imageErrors, setImageErrors] = useState<{[key: string]: boolean}>({});
 
   const handleEmailClick = () => {
     window.location.href = `mailto:${contactInfo.email}`;
@@ -57,6 +58,13 @@ const ContactSection: React.FC<ContactSectionProps> = ({
       setMessage('');
       setIsSubmitting(false);
     }, 1000);
+  };
+
+  const handleImageError = (imageName: string) => {
+    setImageErrors(prev => ({
+      ...prev,
+      [imageName]: true
+    }));
   };
 
   return (
@@ -257,12 +265,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   </p>
                   <div className="flex items-center gap-3">
                     <img
-                      src={testimonial.avatar}
+                      src={imageErrors[testimonial.name] ? '/images/default-avatar.jpg' : testimonial.avatar}
                       alt={testimonial.name}
                       className="w-12 h-12 rounded-full object-cover"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).src = '/images/default-avatar.jpg';
-                      }}
+                      onError={() => handleImageError(testimonial.name)}
                     />
                     <div>
                       <p className="font-semibold text-gray-900">{testimonial.name}</p>

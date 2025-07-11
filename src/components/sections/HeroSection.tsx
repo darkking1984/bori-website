@@ -176,7 +176,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ profile, onCTAClick }) => {
               variant="primary"
               size="lg"
               onClick={() => handleCTAClick('contact')}
-              className="bg-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+              className="border-white text-blue-600 hover:bg-blue-50 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
             >
               <Mail className="w-5 h-5 mr-2" />
               연락하기
@@ -195,11 +195,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ profile, onCTAClick }) => {
           {/* 스크롤 인디케이터 */}
           <motion.div
             variants={itemVariants}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            className="flex justify-center items-center h-full"
           >
             <button
               onClick={() => scrollToSection('about')}
               className="flex flex-col items-center gap-2 text-blue-200 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-lg p-2"
+              
               aria-label="아래로 스크롤"
             >
               <span className="text-sm">더 알아보기</span>
