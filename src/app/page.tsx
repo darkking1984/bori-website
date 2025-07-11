@@ -8,7 +8,6 @@ import VideoSection from '@/components/sections/VideoSection';
 import ContactSection from '@/components/sections/ContactSection';
 import { profileData } from '@/data/profile';
 import { projectsData } from '@/data/projects';
-import { socialLinks } from '@/data/social';
 
 export default function Home() {
   return (
